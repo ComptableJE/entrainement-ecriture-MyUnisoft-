@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Plateforme d'entraînement MyUnisoft</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    .card { border: 1px solid #ccc; padding: 20px; border-radius: 8px; max-width: 500px; }
+  </style>
+</head>
+<body>
+  <h1>Entraînement - Intégration MyUnisoft</h1>
+  <div class="card">
+    <h3>Simulateur de connexion API</h3>
+    <label for="apiKey">Clé API (Mode Test / Sandbox) :</label><br>
+    <input type="password" id="apiKey" placeholder="Entrez votre clé API" style="width: 100%; margin: 10px 0;"><br>
+    <button onclick="testConnection()">Tester la connexion</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function testConnection() {
+      const key = document.getElementById('apiKey').value;
+      if (!key) {
+        document.getElementById('result').innerText = "Veuillez saisir une clé API.";
+        return;
+      }
+      // Simulation d'appel API vers votre serveur relais ou MyUnisoft
+      document.getElementById('result').innerText = "Vérification en cours...";
+    }
+  </script>
+</body>
+</html>
